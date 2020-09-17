@@ -97,11 +97,7 @@ RUN git remote add build git@github-rayjb:Ray-JoyBrick/wander-around-io-build-re
 
 RUN git fetch --all
 
-RUN git rm -r asset-creature-design-unity \
-    && git rm -r asset-hud-design-unity \
-    && git rm -r asset-level-design-unity \
-    && git rm -r asset-unification-unity \
-    && git rm -r behavior-unification-unity \
+RUN git rm -r asset-unification-unity \
     && git rm -r development-support \
     && git rm -r game-specific/preprocessed-assets \
     && git rm -r prepare-ucb-build-asset \
