@@ -100,9 +100,7 @@ RUN git fetch --all
 RUN git rm -r asset-unification-unity \
     && git rm -r development-support \
     && git rm -r game-specific/preprocessed-assets \
-    && git rm -r prepare-ucb-build-asset \
     && git rm -r push-to-build-repo \
-    && git rm cloudbuild-build-asset.yaml \
     && git rm README.md
 
 # RUN if [[ `git status --porcelain` ]]; then \
@@ -115,7 +113,7 @@ RUN git rm -r asset-unification-unity \
 RUN git commit -m "${COMMIT_MESSAGE}"
 RUN git reset --hard master
 
-RUN git checkout prepare-build-release
+RUN git checkout -b prepare-build-release
 RUN git reset --hard master
 
 RUN rsync -avhr --exclude '.gitignore' --exclude '.git' --delete "/game-specific" "/game-unity"
