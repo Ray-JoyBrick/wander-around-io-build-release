@@ -1,0 +1,14 @@
+{
+    "name": "microsoft",
+    "use": true,
+    "toSymlink": [
+        {
+            "name": "AppCenter",
+            "to": "Assets/AppCenter"
+        },
+        {
+            "name": "AppCenterEditorExtensions",
+            "to": "Assets/AppCenterEditorExtensions"
+        }
+    ]
+}

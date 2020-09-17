@@ -1,0 +1,19 @@
+{
+    "name": "WAIO.Build.Remote.Editor",
+    "references": [
+        "Unity.Build",
+        "WAIO.Game.Common",
+        "WAIO.Game.Common.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

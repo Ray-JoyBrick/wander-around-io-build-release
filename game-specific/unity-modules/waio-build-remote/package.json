@@ -1,0 +1,17 @@
+{
+    "name": "com.waio.build.remote",
+    "displayName": "_ WAIO Build Remote",
+    "version": "0.2.0",
+    "unity": "2020.1",
+    "description": "WAIO Build Remote",
+    "keywords": [
+    ],
+    "category": "",
+    "dependencies": {},
+    "author": {
+      "email": "ray@joybrick.cc",
+      "name": "Ray Wang",
+      "url": "https://joybrick.cc"
+    }
+  }
+  

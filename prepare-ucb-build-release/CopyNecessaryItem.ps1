@@ -84,7 +84,7 @@ param()
 
     #
     $unitySetupFolder = Join-Path -Path $parentOfCurrentPath -ChildPath "unity-setup"
-    $amrsFolder = Join-Path -Path $unitySetupFolder -ChildPath "complete-referenced-settings"
+    $amrsFolder = Join-Path -Path $unitySetupFolder -ChildPath "complete-client-referenced-settings"
     $amrsGameSpecificJsonFile = Join-Path -Path $amrsFolder -ChildPath "game-specific.json"
 
     if (Test-Path "$amrsGameSpecificJsonFile") {
