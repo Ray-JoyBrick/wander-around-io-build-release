@@ -19,3 +19,6 @@
 
 # 
 !push-to-build-repo
+
+# 
+!cloudbuild-build-release.yaml
