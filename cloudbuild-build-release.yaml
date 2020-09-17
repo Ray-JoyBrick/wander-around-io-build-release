@@ -6,7 +6,7 @@ steps:
       - -c
       - |
         # No need to unzip at this stage. Will md5 this zip and create one in storage
-        # Then add this directly to complete-unity
+        # Then add this directly to complete-client-unity
         gsutil cp gs://${_GCS_BUCKET}/references.zip /tmp/references.zip
         md5=$(md5sum "/tmp/references.zip" | cut -d ' ' -f 1) && echo $md5 >> "references-checksum" && mv "/tmp/references.zip" "/workspace/$md5.zip"
         # Add -n parameter to gsutil cp so that it can skip if there is one with the same name already
@@ -15,15 +15,15 @@ steps:
         #
         mkdir game-unity
         # Move related folders and files to this folder
-        mv /workspace/complete-unity /workspace/game-unity/
+        mv /workspace/complete-client-unity /workspace/game-unity/
         mv /workspace/game-specific /workspace/game-unity/
         mv /workspace/prepare-ucb-build-release /workspace/game-unity/
 
-        # md5=$(cat "references-checksum") && mv "/workspace/$md5.zip" "/workspace/game-unity/complete-unity/references.zip"
-        mv "references-checksum" "/workspace/game-unity/complete-unity/"
-        # Need to retrieve preprocessed-assets.zip and place it in complete-unity as well
-        # md5=$(cat "/workspace/game-unity/game-specific/preprocessed-assets-checksum") && gsutil cp "gs://${_GCS_BUCKET}/preprocessed-assets-$md5.zip" "/workspace/game-unity/complete-unity/preprocessed-assets.zip"
-        mv "/workspace/game-unity/game-specific/preprocessed-assets-checksum" "/workspace/game-unity/complete-unity/"
+        # md5=$(cat "references-checksum") && mv "/workspace/$md5.zip" "/workspace/game-unity/complete-client-unity/references.zip"
+        mv "references-checksum" "/workspace/game-unity/complete-client-unity/"
+        # Need to retrieve preprocessed-assets.zip and place it in complete-client-unity as well
+        # md5=$(cat "/workspace/game-unity/game-specific/preprocessed-assets-checksum") && gsutil cp "gs://${_GCS_BUCKET}/preprocessed-assets-$md5.zip" "/workspace/game-unity/complete-client-unity/preprocessed-assets.zip"
+        mv "/workspace/game-unity/game-specific/preprocessed-assets-checksum" "/workspace/game-unity/complete-client-unity/"
 
         mv /workspace/unity-setup /workspace/game-unity/
         mv /workspace/.gitattributes /workspace/game-unity/
@@ -31,7 +31,7 @@ steps:
         mv /workspace/remove-dsstore.ps1 /workspace/game-unity/
         mv /workspace/setup-game-ref.ps1 /workspace/game-unity/
 
-  - id: organize-prepared-complete-project
+  - id: organize-prepared-complete-client-project
     name: "mcr.microsoft.com/powershell:preview-alpine-3.10"
     entrypoint: sh
     args:
@@ -48,9 +48,9 @@ steps:
         # Add bash file to instruct where preprocessed-assets is moved to, can actually generate here
         cd /workspace/game-unity/unity-setup
         pwsh FileMoveCompleteReferences.ps1
-        mv /workspace/game-unity/move-files.sh /workspace/game-unity/complete-unity
+        mv /workspace/game-unity/move-files.sh /workspace/game-unity/complete-client-unity
 
-        mv /workspace/game-unity/game-specific /workspace/game-unity/complete-unity
+        mv /workspace/game-unity/game-specific /workspace/game-unity/complete-client-unity
 
   - id: retrieve-ssh-key
     name: gcr.io/cloud-builders/gcloud
@@ -94,7 +94,7 @@ steps:
         # git checkout -b ucb-build-release
         git reset --hard from-repo/prepare-build-release
 
-        rsync -avhr --exclude '.git' --delete /workspace/game-unity/complete-unity/ /workspace/ucb-build-release/
+        rsync -avhr --exclude '.git' --delete /workspace/game-unity/complete-client-client-unity/ /workspace/ucb-build-release/
 
         rm /workspace/ucb-build-release/.gitattributes
         rm /workspace/ucb-build-release/.gitignore
