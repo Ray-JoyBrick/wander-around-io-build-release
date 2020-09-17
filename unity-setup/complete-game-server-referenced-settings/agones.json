@@ -1,0 +1,10 @@
+{
+    "name": "googleforgames",
+    "use": true,
+    "toSymlink": [
+        {
+            "name": "agones/sdks/unity",
+            "to": "Assets/Standard Assets/agones"
+        }
+    ]
+}

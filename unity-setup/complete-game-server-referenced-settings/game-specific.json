@@ -1,0 +1,50 @@
+{
+    "name": "game-specific",
+    "use": false,
+    "toSymlink": [
+        {
+            "name": "unity-modules/agbic2020-game-entry/Editor",
+            "to": "Assets/_/1 - Game/Level - Entry/Scripts/Editor"
+        },
+        {
+            "name": "unity-modules/agbic2020-game-entry/Runtime",
+            "to": "Assets/_/1 - Game/Level - Entry/Scripts/Runtime"
+        },
+        {
+            "name": "unity-modules/agbic2020-game-entry-assist/Editor",
+            "to": "Assets/_/1 - Game/Level - Entry - Assist/Scripts/Editor"
+        },
+        {
+            "name": "unity-modules/agbic2020-game-entry-assist/Runtime",
+            "to": "Assets/_/1 - Game/Level - Entry - Assist/Scripts/Runtime"
+        },
+        {
+            "name": "unity-modules/agbic2020-game-preparation/Editor",
+            "to": "Assets/_/1 - Game/Level - Preparation/Scripts/Editor"
+        },
+        {
+            "name": "unity-modules/agbic2020-game-preparation/Runtime",
+            "to": "Assets/_/1 - Game/Level - Preparation/Scripts/Runtime"
+        },
+        {
+            "name": "unity-modules/agbic2020-game-stage/Editor",
+            "to": "Assets/_/1 - Game/Level - Stage/Scripts/Editor"
+        },
+        {
+            "name": "unity-modules/agbic2020-game-stage/Runtime",
+            "to": "Assets/_/1 - Game/Level - Stage/Scripts/Runtime"
+        },
+        {
+            "name": "unity-modules/agbic2020-game-stage-assist/Editor",
+            "to": "Assets/_/1 - Game/Level - Stage - Assist/Scripts/Editor"
+        },
+        {
+            "name": "unity-modules/agbic2020-game-stage-assist/Runtime",
+            "to": "Assets/_/1 - Game/Level - Stage - Assist/Scripts/Runtime"
+        },
+        {
+            "name": "extend-3rd/Setting - Editor Console Pro",
+            "to": "Assets/_/5 - Misc/Setting - Editor Console Pro"
+        }
+    ]
+}

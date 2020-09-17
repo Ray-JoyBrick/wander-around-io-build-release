@@ -1,0 +1,14 @@
+{
+    "name": "vis2k",
+    "use": true,
+    "toSymlink": [
+        {
+            "name": "Mirror",
+            "to": "Assets/Standard Assets/Mirror"
+        },
+        {
+            "name": "ScriptTemplates",
+            "to": "Assets/Standard Assets/ScriptTemplates"
+        }
+    ]
+}

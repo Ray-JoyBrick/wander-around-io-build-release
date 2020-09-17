@@ -1,0 +1,42 @@
+{
+    "name": "common-game-server",
+    "use": true,
+    "toSymlink": [
+        {
+            "name": "OpenTelemetry.Api.dll",
+            "to": "Assets/Plugins/OpenTelemetry.Api.dll"
+        },
+        {
+            "name": "OpenTelemetry.dll",
+            "to": "Assets/Plugins/OpenTelemetry.dll"
+        },
+        {
+            "name": "System.Buffers.dll",
+            "to": "Assets/Plugins/System.Buffers.dll"
+        },
+        {
+            "name": "System.Collections.Immutable.dll",
+            "to": "Assets/Plugins/System.Collections.Immutable.dll"
+        },
+        {
+            "name": "System.Diagnostics.DiagnosticSource.dll",
+            "to": "Assets/Plugins/System.Diagnostics.DiagnosticSource.dll"
+        },
+        {
+            "name": "System.Memory.dll",
+            "to": "Assets/Plugins/System.Memory.dll"
+        },
+        {
+            "name": "System.Numerics.Vectors.dll",
+            "to": "Assets/Plugins/System.Numerics.Vectors.dll"
+        },
+        {
+            "name": "System.Reflection.Emit.Lightweight.dll",
+            "to": "Assets/Plugins/System.Reflection.Emit.Lightweight.dll"
+        },
+        {
+            "name": "System.Runtime.CompilerServices.Unsafe.dll",
+            "to": "Assets/Plugins/System.Runtime.CompilerServices.Unsafe.dll"
+        }
+    ]
+}
