@@ -1,31 +1,9 @@
 /*
 
-!.dockerignore
-!.editorconfig
-!.gitattributes
 !.gitignore
-!README.md
 
-# 
-!asset-unification-unity
-!complete-client-unity
-!complete-game-server-unity
-
-#
-!game-specific 
-!unity-setup
-!remove-dsstore.ps1
-!setup-game-ref.ps1
-
-# 
-!development-support
-
-# 
+!complete-project
+!game-specific
 !prepare-ucb-build-release
-!push-to-build-repo
 
-# 
 !cloudbuild-build-release.yaml
-
-#
-!Docker-references-to-storage
