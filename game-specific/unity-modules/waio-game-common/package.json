@@ -1,0 +1,19 @@
+{
+    "name": "com.waio.game.common",
+    "displayName": "_ WAIO Game Common",
+    "version": "0.2.0",
+    "unity": "2020.1",
+    "unityRelease": "6f1",
+    "description": "WAIO Game Common",
+    "keywords": [
+        "waio"
+    ],
+    "category": "",
+    "dependencies": {
+    },
+    "author": {
+        "email": "ray@joybrick.cc",
+        "name": "Ray Wang",
+        "url": "https://joybrick.cc"
+    }
+}
