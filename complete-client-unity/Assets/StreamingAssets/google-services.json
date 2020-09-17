@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "723752527856",
+    "firebase_url": "https://wander-around-io.firebaseio.com",
+    "project_id": "wander-around-io",
+    "storage_bucket": "wander-around-io.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723752527856:android:89b533823c2b95af461f35",
+        "android_client_info": {
+          "package_name": "com.joybrick.WanderAroundIO"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723752527856-1rucdelu65lgbvqshuei175j6nqdu41i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx10r-4PtS31aHmHzfABS3wI9dftw1sB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723752527856-1rucdelu65lgbvqshuei175j6nqdu41i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

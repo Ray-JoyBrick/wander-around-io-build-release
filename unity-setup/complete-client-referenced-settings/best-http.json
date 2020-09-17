@@ -3,8 +3,8 @@
     "use": true,
     "toSymlink": [
         {
-            "name": "BestHTTP",
-            "to": "Assets/Standard Assets/BestHTTP"
+            "name": "Best HTTP",
+            "to": "Assets/Standard Assets/Best HTTP"
         }
     ]
 }

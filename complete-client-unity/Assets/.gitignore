@@ -9,10 +9,25 @@
 # Folders
 
 !_
+# 
+!Editor
+!Editor Default Resources
 !Gizmos
 !Plugins
+# Not adding a sub folder gitignore file into Resources for clean purpose
+!Resources
+Resources/**
+!Resources/I2Languages.asset
+!Resources/I2Languages.asset.meta
 !Standard Assets
+# Not adding a sub folder gitignore file into StreamingAssets for clean purpose
 !StreamingAssets
+StreamingAssets/**
+!StreamingAssets/build.txt
+# !StreamingAssets/build.txt.meta
+# These should be fine to store in git repo
+!StreamingAssets/google-services-desktop.json
+!StreamingAssets/google-services.json
 
 !Ludiq
 

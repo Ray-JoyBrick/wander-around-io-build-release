@@ -1,6 +1,20 @@
 /*
 
+!.dockerignore
 !.editorconfig
 !.gitattributes
 !.gitignore
+
+# 
 !complete-client-unity
+!complete-game-server-unity
+
+#
+!game-specific 
+!unity-setup
+
+# 
+!development-support
+
+# 
+!push-to-build-repo
