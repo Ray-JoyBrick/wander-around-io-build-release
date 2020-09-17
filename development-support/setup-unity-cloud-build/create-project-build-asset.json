@@ -1,0 +1,22 @@
+{
+    "name": "wander-around-io - Build Asset",
+    "disabled": false,
+    "disableNotifications": false,
+    "generateShareLinks": false,
+    "settings": {
+        "remoteCacheStrategy": "library",
+        "scm": {
+            "type": "git",
+            "url": "",
+            "user": "",
+            "pass": "",
+            "fingerprint": "",
+            "p4authtype": "",
+            "authType": "LDAPWorkingMode",
+            "shallowclone": false,
+            "useEncryption": false,
+            "encryptionKey": "",
+            "encryptionMethod": "AES128"
+        }
+    }
+}
