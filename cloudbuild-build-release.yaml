@@ -94,7 +94,7 @@ steps:
         # git checkout -b ucb-build-release
         git reset --hard from-repo/prepare-build-release
 
-        rsync -avhr --exclude '.git' --delete /workspace/game-unity/complete-client-client-unity/ /workspace/ucb-build-release/
+        rsync -avhr --exclude '.git' --delete /workspace/game-unity/complete-client-unity/ /workspace/ucb-build-release/
 
         rm /workspace/ucb-build-release/.gitattributes
         rm /workspace/ucb-build-release/.gitignore
