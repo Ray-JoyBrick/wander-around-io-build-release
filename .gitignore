@@ -21,6 +21,7 @@
 !development-support
 
 # 
+!prepare-ucb-build-release
 !push-to-build-repo
 
 # 

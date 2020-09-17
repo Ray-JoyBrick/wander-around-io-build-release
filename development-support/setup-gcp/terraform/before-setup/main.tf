@@ -81,3 +81,11 @@ resource "google_project_service" "service-sourcerepo" {
   # disable_dependent_services = true
   disable_dependent_services = false
 }
+
+resource "google_project_service" "service-secretmanager" {
+  project = "wander-around-io"
+  service = "secretmanager.googleapis.com"
+
+  # disable_dependent_services = true
+  disable_dependent_services = false
+}
