@@ -1,0 +1,20 @@
+/*
+
+!.gitignore
+
+# General exclude rules move here
+*.meta
+!*.*.meta
+
+# Folders
+
+!_
+!Gizmos
+!Plugins
+!Standard Assets
+!StreamingAssets
+
+!Ludiq
+
+# Files
+
