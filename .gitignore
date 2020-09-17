@@ -4,6 +4,7 @@
 !.editorconfig
 !.gitattributes
 !.gitignore
+!README.md
 
 # 
 !asset-unification-unity
@@ -13,6 +14,8 @@
 #
 !game-specific 
 !unity-setup
+!remove-dsstore.ps1
+!setup-game-ref.ps1
 
 # 
 !development-support
@@ -22,3 +25,6 @@
 
 # 
 !cloudbuild-build-release.yaml
+
+#
+!Docker-references-to-storage

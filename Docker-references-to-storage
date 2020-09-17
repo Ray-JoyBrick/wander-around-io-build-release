@@ -1,0 +1,50 @@
+FROM alpine:latest as cleanup-references
+
+RUN apk update && apk add rsync zip unzip
+
+COPY ./references references
+
+RUN rm -rf "references/BestHTTP/Best HTTP/Examples" \
+    && rm -rf "references/Borodar" \
+    && rm -rf "references/FlyingWorm" \
+    && rm -rf "references/googleforgames/agones/.git" \
+    && rm -rf "references/googleforgames/agones/.github" \
+    && rm -rf "references/googleforgames/agones/build" \
+    && rm -rf "references/googleforgames/agones/cmd" \
+    && rm -rf "references/googleforgames/agones/docs" \
+    && rm -rf "references/googleforgames/agones/examples" \
+    && rm -rf "references/googleforgames/agones/install" \
+    && rm -rf "references/googleforgames/agones/pkg" \
+    && rm -rf "references/googleforgames/agones/proto" \
+    && rm -rf "references/googleforgames/agones/sdks/cpp" \
+    && rm -rf "references/googleforgames/agones/sdks/csharp" \
+    && rm -rf "references/googleforgames/agones/sdks/go" \
+    && rm -rf "references/googleforgames/agones/sdks/nodejs" \
+    && rm -rf "references/googleforgames/agones/sdks/rust" \
+    && rm -rf "references/googleforgames/agones/sdks/swagger" \
+    && rm -rf "references/googleforgames/agones/sdks/unreal" \
+    && rm -rf "references/googleforgames/agones/site" \
+    && rm -rf "references/googleforgames/agones/test" \
+    && rm -rf "references/googleforgames/agones/vendor" \
+    && rm -rf "references/microsoft/PlayFabEditorExtensions" \
+    && rm -rf "references/microsoft/PlayFabSDK" \
+    && rm -rf "references/Opsive/Behavior Designer/Gizmos" \
+    && rm -rf "references/vis2k/Mirror/Examples"
+
+RUN zip -r "references.zip" "references"
+
+FROM google/cloud-sdk:alpine as upload-references
+
+ARG SERVICE_NAME_STORAGE
+ARG PROJECT_ID
+ARG JSON_FILE_KEYFILE_STORAGE
+ARG GCS_BUCKET
+
+RUN echo "${JSON_FILE_KEYFILE_STORAGE}" > /root/keyfile-storage.json \
+    && gcloud auth activate-service-account \
+    ${SERVICE_NAME_STORAGE}@${PROJECT_ID}.iam.gserviceaccount.com \
+    --key-file=/root/keyfile-storage.json --project=${PROJECT_ID}
+
+COPY --from=cleanup-references "/references.zip" "/references.zip"
+
+RUN gsutil cp -n "references.zip" "gs://${GCS_BUCKET}/references.zip"
